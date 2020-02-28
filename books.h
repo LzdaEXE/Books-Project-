@@ -2,7 +2,7 @@
 // Books object
 class Books
 {
-private:
+private:*
   
 
 
