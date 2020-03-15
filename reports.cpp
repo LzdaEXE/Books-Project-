@@ -1,3 +1,7 @@
+#include "reports.h"
+#include <iostream>
+#include <iomanip>
+#include "bookdata.h"
 
 void reports()
 {
@@ -18,7 +22,7 @@ void reports()
 		std::cout << "7. Return to the Main Menu\n\n";
 
 		std::cout << "Enter Your Choice: ";
-		std:: cin >> choice;
+		std::cin >> choice;
 
 		//validate input
 		while (choice < 1 || choice > 7)
@@ -27,33 +31,32 @@ void reports()
 			std::cout << "Enter your choice: ";
 			std::cin >> choice;
 		}
-		switch (choice)
-		{
-		case 1:
-			repListing();
-			break;
-		case 2:
-			repWholesale();
-			break;
-		case 3:
-			repRetail();
-			break;
-		case 4:
-			repQty();
-			break;
-		case 5:
-			repCost();
-			break;
-		case 6:
-			repAge();
-			break;
-		case 7:
-			std::cout << "\nYou selected item 7";
-			break;
-		}
+			switch (choice)
+			{
+			case 1:
+				repListing();
+				break;
+			case 2:
+				repWholesale();
+				break;
+			case 3:
+				repRetail();
+				break;
+			case 4:
+				repQty();
+				break;
+			case 5:
+				repCost();
+				break;
+			case 6:
+				repAge();
+				break;
+			case 7:
+				std::cout << "\nYou selected item 7";
+				break;
+			}
 
-		std::cout << std::endl;
+			std::cout << std::endl;
 
 	}//end while choice !=7
 }
-
