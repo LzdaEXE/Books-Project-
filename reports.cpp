@@ -1,8 +1,3 @@
-#include <iomanip>
-#include <iostream>
-
-const int NUM_BOOKS = 100;
-BookData book[NUM_BOOKS];
 
 void reports()
 {
@@ -62,39 +57,3 @@ void reports()
 	}//end while choice !=7
 }
 
-void repListing()
-{
-	char end[] = { '\0' };
-	char date[8]; //todays date
-	std::cout << "\n\nEnter Today's date: ";
-	std::cin >> date;
-	std::cout << std::endl;
-
-	std::cout << "\n\n\t\tSerendipity Booksellers Inventory Report\n";
-	std::cout << "Date: \t\t" << date;
-
-	for (int i = 0; i < NUM_BOOKS; i++)
-	{
-		if (strcmp(book[i].isbn, end) != 0) //not printing empty records
-		{
-			std::cout << "\n_____________________________________________________";
-			std::cout << "\n\n\Title:\t\t\t" << book[i].bookTitle;
-			std::cout << "\nISBN:\t\t\t" << book[i].isbn;
-			std::cout << "\nAuthor:\t\t\t" << book[i].author;
-			std::cout << "\nPublisher:\t\t" << book[i].publisher;
-			std::cout << "\nDate Added:\t\t" << book[i].dateAdded;
-			std::cout << std::fixed << std::showpoint << std::setprecision(2);
-			std::cout << "\nQuantity on Hand:\t" << book[i].qtyOnHand;
-			std::cout << "\nWholesale Cost: \t\t$ " << book[i].wholesale;
-			std::cout << "\nRetail Price:\t\t $" << book[i].retail;
-		}
-	}
-
-	std::cout << "\n\n________________________________________________________";
-	std::cout << "\n\nEnd of Inventory Report\n\n\n";
-
-	//pause report on screen
-	std::cout << "Press Enter to continue";
-	std::cin.ignore();
-	std::cin.get();
-}
